@@ -29,11 +29,11 @@ function Home() {
         )
     }
     return (
-        <div className='py-4 text-center flex justify-center align-center'>
+        <div className='py-4 text-center flex justify-center align-center mb-20'>
             <Container>
                 <div className='flex flex-wrap justify-start align-center'>
                     {posts.map((post) => (
-                        <div key={post.$id} className='sm:w-1/2 md:w-1/3 lg:w-1/5'>
+                        <div key={post.$id} className='sm:w-1/2 md:w-1/3 lg:w-1/4'>
                             <PostCard {...post} />
                         </div>
                     ))}

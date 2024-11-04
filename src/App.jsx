@@ -27,9 +27,9 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div className="flex flex-col bg-black min-h-screen lg:h-full p-6 rounded-lg">
+    <div className="flex flex-col bg-black h-screen justify-between p-6 rounded-lg">
       <Header />
-      <main className="bg-customGreen lg:h-full">
+      <main className="bg-customGreen mt-9 lg:mt-0">
         <Outlet />
       </main>
       <Footer />

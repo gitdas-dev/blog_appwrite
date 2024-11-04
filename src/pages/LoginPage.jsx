@@ -29,7 +29,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="py-8">
+    <div className="py-4 text-center flex justify-center align-center mb-20">
       <div className="flex items-center justify-center w-full">
         <div
           className={`mx-auto w-full max-w-lg bg-gray-300 rounded-xl p-10 border border-black/10`}
