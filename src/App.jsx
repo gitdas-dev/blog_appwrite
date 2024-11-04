@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div className="flex flex-col bg-black h-full justify-between p-6">
+    <div className="flex flex-col bg-black justify-between p-6">
       <Header />
       <main className="bg-customGreen m-0">
         <Outlet />

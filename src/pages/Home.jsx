@@ -29,7 +29,7 @@ function Home() {
         )
     }
     return (
-        <div className='py-4 text-center flex justify-center align-center mb-20'>
+        <div className='py-4 text-center flex justify-center align-center mb-20 h-full'>
             <Container>
                 <div className='flex flex-wrap justify-center md:justify-start align-center gap-y-10'>
                     {posts.map((post) => (
