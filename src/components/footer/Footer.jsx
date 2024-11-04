@@ -4,12 +4,12 @@ import Logo from '../Logo'
 
 function Footer() {
   return (
-    <section className="relative w-full h-full bottom-0 left-0 overflow-hidden bg-gray-400 border font-mono border-t-2 border-t-black p-4">
+    <section className="relative w-full lg:h-[20vh] bottom-0 left-0 overflow-hidden bg-gray-400 border font-mono border-t-2 border-t-black p-4">
             <div className="relative z-10 mx-auto max-w-7xl px-4">
-                <div className="flex flex-wrap">
-                    <div className="w-full md:w-1/2 lg:w-5/12 flex justify-center items-center">
+                <div className="flex flex-wrap justify-center align-center">
+                    <div className="w-full md:w-1/2 lg:w-5/12 flex justify-center items-center align-center">
                         <div className="mb-4 flex flex-col justify-center">
-                            <div className=" inline-flex items-center justify-center">
+                            <div className=" inline-flex items-center justify-center align-center">
                                 <Logo width="100px" />
                             </div>
                             <div>
@@ -19,9 +19,9 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 lg:w-2/12">
-                        <div className="h-full md:mb-5">
-                            <h3 className="tracking-px  text-xs font-semibold uppercase text-gray-500">
+                    <div className="w-full md:w-1/2 lg:w-2/12 lg:text-2xl">
+                        <div className="h-full md:mb-5 text-center">
+                            <h3 className="tracking-px  text-xs text-center font-semibold uppercase text-gray-500">
                                 Company
                             </h3>
                             <ul>
@@ -61,7 +61,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 lg:w-2/12 mb-4">
-                        <div className="h-full">
+                        <div className="h-full text-center mt-4">
                             <h3 className="  text-xs font-semibold uppercase text-gray-500">
                                 Support
                             </h3>
@@ -102,7 +102,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 lg:w-3/12 md:mb-4">
-                        <div className="h-full">
+                        <div className="h-full text-center mt-4">
                             <h3 className="tracking-px text-xs font-semibold uppercase text-gray-500">
                                 Legals
                             </h3>
