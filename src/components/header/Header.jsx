@@ -61,7 +61,7 @@ function Header() {
                     ))}
 
                     {authStatus && (
-                        <li className='py-3 sm:text-sm md:text-lg lg:text-2xl'>
+                        <li className='md:py-4 py-4 sm:text-sm md:text-lg lg:text-2xl sm:bg-black text-white rounded-xl md:w-28 text-center'>
                             <LogoutButton />
                         </li>
                     )}
