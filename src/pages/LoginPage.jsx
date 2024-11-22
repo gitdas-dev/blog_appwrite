@@ -5,16 +5,19 @@ import { Button, Input, Logo } from "../components/index";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import authService from "../Appwrite/Auth";
+import { AiOutlineLoading } from "react-icons/ai";
 
 function LoginPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const login = async (data) => {
+    setLoading(true);
     console.log(data);
-    
+
     setError("");
     try {
       const session = await authService.login(data);
@@ -26,6 +29,7 @@ function LoginPage() {
     } catch (error) {
       setError(error.message);
     }
+    setLoading(false);
   };
 
   return (
@@ -70,8 +74,12 @@ function LoginPage() {
                   required: true,
                 })}
               />
-              <Button type="submit" className="w-full">
-                Sign in
+              <Button type="submit" className="w-full flex justify-center">
+                {loading ? (
+                  <AiOutlineLoading className="h-7 w-7 animate-spin text-center flex justify-center" />
+                ) : (
+                  "Login"
+                )}
               </Button>
             </div>
           </form>

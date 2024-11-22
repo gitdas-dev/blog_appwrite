@@ -5,14 +5,17 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../Appwrite/Auth";
 import { useForm } from "react-hook-form";
+import { AiOutlineLoading } from "react-icons/ai";
 
 function Signup() {
   const navigate = useNavigate();
   const [error, setError] = useState();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
+  const [loading, setLoading] = useState(false);
 
   const signup = async (data) => {
+    setLoading(true);
     setError("");
     try {
       const userData = await authService.createAccount(data);
@@ -24,6 +27,7 @@ function Signup() {
     } catch (error) {
       setError(error.message);
     }
+    setLoading(false);
   };
   return (
     <div className="py-4 text-center flex justify-center align-center mb-20 mt-12">
@@ -77,8 +81,12 @@ function Signup() {
                   required: true,
                 })}
               />
-              <Button type="submit" className="w-full">
-                Create Account{" "}
+              <Button type="submit" className="w-full flex justify-center">
+                {loading ? (
+                  <AiOutlineLoading className="h-7 w-7 animate-spin text-center flex justify-center" />
+                ) : (
+                  "Signup"
+                )}
               </Button>
             </div>
           </form>
