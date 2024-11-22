@@ -1,6 +1,8 @@
 import conf from "../conf/config";
 import { Client, Account, ID } from "appwrite";
 
+
+
 export class AuthService {
   client = new Client();
   account;
@@ -18,7 +20,7 @@ export class AuthService {
         ID.unique(),
         email,
         password,
-        name,
+        name
       );
       if (userAccount) {
         //call another method
