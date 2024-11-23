@@ -3,16 +3,20 @@ import { useDispatch } from "react-redux";
 import authService from "../../Appwrite/Auth";
 import { logout } from "../../store/authSlice";
 import { AiOutlineLoading } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function LogoutButton() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const logoutHandler = () => {
     setLoading(true);
     authService.logout().then(() => {
       dispatch(logout());
     });
-    setLoading(false);
+
+    navigate('/login')
+    
   };
 
   return (
@@ -23,7 +27,7 @@ function LogoutButton() {
       {loading ? (
         <AiOutlineLoading className="h-7 w-7 animate-spin text-center flex justify-center" />
       ) : (
-        "Login"
+        "Logout"
       )}
     </button>
   );
